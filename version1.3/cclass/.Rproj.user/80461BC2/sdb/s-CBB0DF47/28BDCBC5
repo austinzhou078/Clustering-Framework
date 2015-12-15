@@ -1,0 +1,17 @@
+{
+    "contents" : "dataset <- as.matrix(iris[,1:4])\niter <- 100\ncluster <- 19\ndist <- \"euclidean\"\nwide = dim(dataset)[2]\nlength = dim(dataset)[1]\n\nlibrary(cmprsk,T)\nlibrary(survival)\nlibrary(cmprsk)\nlibrary(cclust)\nlibrary(e1071)\nlibrary(cluster)\nlibrary(gclus)\nlibrary(fpc)\nlibrary(fastICA)\nlibrary(e1071)\nlibrary(irr)\n\nnumber = cluster_num(dataset, cluster)\nh <- hclust(dist(dataset), method=\"average\")\ninitial <- tapply(dataset, list(rep(cutree(h,number), ncol(dataset)), col(dataset)), mean)\ncl_km <- kmeans(dataset,initial, iter)\nkm <- data.frame(dataset, clust=cl_km$cluster)    \n\n##pam\ncl_pam <- pam(dataset, number, diss = inherits(dataset, \"dist\"), metric = dist,\n              medoids = NULL, stand = FALSE, cluster.only = FALSE)\npam <- data.frame(dataset, clust=cl_pam$clustering)  \n\n##FCM\ninitial <- tapply(dataset, list(rep(cutree(h,number), ncol(dataset)), col(dataset)), mean)\ncl <- cmeans(dataset,initial,iter,verbose=FALSE,dist= dist, method=\"cmeans\",m=2,initial)\nfcm <- data.frame(dataset, clust=cl$cluster)\n\n#construct all results together\nclassif <- data.frame(cbind(km$clust, pam$clust, fcm$clust))\nnames(classif) <- c(\"km\", \"pam\", \"fcm\")\nresult <- data.frame(dataset,classif)\nresult = as.matrix(result)\n\n#align label, according the number of clutering methods, the paramater can be changed\naligned_result = align(result,(wide+1):(wide+3))\n\ninterss = c()\nfor(i in 1:length){\n  if(aligned_result[i,wide+1] == aligned_result[i,wide+2] & aligned_result[i,wide+2] == aligned_result[i,wide+3] ){\n    interss = c(interss,as.integer(aligned_result[i,wide+1]))\n  }else{\n    interss = c(interss,\"NC\")\n  }\n}\ncommon <- list()  \n\ncommon$cluster <- data.frame(dataset, class=interss) \n\ncolors <- cluster_color(number, common$cluster)\n\na <- princomp(common$cluster[,1:wide], cor=T)\nchoices = 1:2\nscale = 1\nx = a\npc.biplot = FALSE\ncolor = colors$colors\ncluster_label = colors$legendName\ncolor_label = colors$legendColor\nscores <- x$scores\nlam <- x$sdev[choices]\nif (is.null(n <- x$n.obs)) \n         n <- 1\nlam <- lam * sqrt(n)\nif (scale < 0 || scale > 1) \n  warning(\"'scale' is outside [0, 1]\")\nif (scale != 0) \n  lam <- lam^scale\nelse lam <- 1\nif (pc.biplot) \n  lam <- lam/sqrt(n)\nt(t(scores[, choices])/lam)\nt(t(x$loadings[, choices]) * lam)\n\nlibrary(cclass)\ndataset1 <- read.table(\"/Users/lycopene/Dropbox/Summer/datasets/somaia_blue.txt\", header=TRUE, sep = \"\\t\", na.strings = \".\")\nww = cclass(dataset1)\n\n",
+    "created" : 1407233133384.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2692811339",
+    "id" : "28BDCBC5",
+    "lastKnownWriteTime" : 1407715553,
+    "path" : "~/Desktop/summer_intern/testing.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

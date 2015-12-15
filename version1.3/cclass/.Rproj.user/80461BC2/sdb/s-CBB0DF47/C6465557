@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{abstract.cclass}\r\\alias{abstract}\r%- Also NEED an '\\alias' for EACH other topic documented here.\r\\title{\rAbstract function of main Core class selection framework default function\r}",
+    "created" : 1407160252436.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2410665056",
+    "id" : "C6465557",
+    "lastKnownWriteTime" : 1407165779,
+    "path" : "~/cclass/man/cclass.Rd",
+    "project_path" : "man/cclass.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{print.cclass}\r\\alias{format}\r%- Also NEED an '\\alias' for EACH other topic documented here.\r\\title{\rFormat the output of Core class selection framework \r}\r\r",
+    "created" : 1407160399823.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1978470112",
+    "id" : "6EA57F09",
+    "lastKnownWriteTime" : 1407165716,
+    "path" : "~/cclass/man/print.cclass.Rd",
+    "project_path" : "man/print.cclass.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}

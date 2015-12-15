@@ -1,0 +1,17 @@
+{
+    "contents" : "library(rgl)\nopen3d()\nplot3d(dataset)\n\n\nproblem in specific dataset--> \n  \n  \n#create the tree of the orginal tree\nh <- hclust(dist(dataset), method=\"average\")",
+    "created" : 1407702149050.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3510081821",
+    "id" : "F3B03ED8",
+    "lastKnownWriteTime" : 1407702247,
+    "path" : "~/Dropbox/Summer/bug.R",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

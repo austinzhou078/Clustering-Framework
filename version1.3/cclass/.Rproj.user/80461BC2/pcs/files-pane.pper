@@ -1,0 +1,9 @@
+{
+    "path" : "~/cclass/man",
+    "sortOrder" : [
+        {
+            "ascending" : true,
+            "columnIndex" : 2
+        }
+    ]
+}

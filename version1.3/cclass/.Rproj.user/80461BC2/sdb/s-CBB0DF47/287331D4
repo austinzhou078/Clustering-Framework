@@ -1,0 +1,16 @@
+{
+    "contents" : "\\name{core_class}\r\\alias{core_class}\r%- Also NEED an '\\alias' for EACH other topic documented here.\r\\title{\rCore class selection framework\r}\r\\description{\rA framework to elucidate a set of core groups of a dataset\r}\r\\usage{\rcclass = function (x, ccol = c(1:dim(x)[2]),cluster=19, iter = 100, dist=\"euclidean\")\r}\r\\arguments{\r  \\item{x}{\rthe input dataset which need analysing\r}\r  \\item{ccol}{\rthe features of dataset which will be considered as dimensions\r}\r  \\item{cluster}{\r maximum clusters will be compared(from 2 to 19)\r}\r  \\item{iter}{\riterated times of k-means and fcm algorithm(default 100 times)\r}\r  \\item{dist}{\rthe method will be used for fcm and pam, choice: manhattan and euclidean\r}\r}\r\\details{\rThis is a framework to elucidate a set of core groups of a dataset. It specifies the application of different clustering algorithms, many statistical and visualization techniques. At the beginning of this framework, different clustering algorithms are applied. Then a set of common classes is defined in order to determine the fundamental characteristics of data expressed by different groups.\r}\r\\value{\ritem{cluster}{the new dataset contain the core class}\ritem{plot }{the biplot of classes}\ritem{number }{the selected number of clusters }\r}\r\\references{\rP. Kellam, X. Liu, N. Martin, C. Orengo, S. Swift, and A. Tucker,\r“Comparing, contrasting and combining clusters in viral gene expression data,” inProceedings of 6th Workshop on Intelligent Data\rAnalysis in Medicine, 2001.\r\rSoria, D. Garibaldi, J.M.\r\"A novel framework to elucidate core classes in a dataset\"\rEvolutionary Computation (CEC), 2010 IEEE Congress on. Date of Conference: 18-23 July 2010 Page(s): 1 - 8 Print ISBN: 978-1-4244-6909-3 INSPEC Accession Number: 11567584 Conference Location : Barcelona DOI: 10.1109/CEC.2010.5586331 Publisher: IEEE\r\r}\r\\author{\rXiaotian Zhou, Chunfan Gao, Daniele.Soria\r}\r\\note{\r%%  ~~further notes~~\r}\r\r%% ~Make other sections like Warning with \\section{Warning }{....} ~\r\r\\seealso{\r%% ~~objects to See Also as \\code{\\link{help}}, ~~~\r}\r\\examples{\rresult = cclass(iris, ccol=c(1:4), cluster = 15, iter = 50)\r}\r% Add one or more standard keywords, see file 'KEYWORDS' in the\r% R documentation directory.\r\\keyword{cluster}\r\\keyword{core}\r\\keyword{framework}\r",
+    "created" : 1407160542068.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "259640901",
+    "id" : "287331D4",
+    "lastKnownWriteTime" : 1407160568,
+    "path" : "~/cclass/man/cclass-package.Rd",
+    "project_path" : "man/cclass-package.Rd",
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_doc"
+}
